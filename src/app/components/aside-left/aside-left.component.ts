@@ -48,27 +48,36 @@ export class AsideLeftComponent implements OnInit {
     },
   ];
   public tf: any = [true, true, true, true, true, true, true, true, true];
-  // public url: any = [
-  //   'home',
-  //   'appoint-admin',
-  //   'visitor-admin',
-  //   'conferenece-admin',
-  //   'warranty-notice',
-  //   'vegetable-admin',
-  //   'bus-admin',
-  //   'complaint-suggestions',
-  //   'user-admin'
-  // ];
-  url: any = [
+  public urlX: any = [
+    'home',
+    'appointment-admin',
+    'visitor-admin',
+    'conferenece-admin',
+    'warranty-notice',
+    'vegetable-admin',
+    'bus-admin',
+    'complaint-suggestions',
+    'user-admin'
+  ];
+  urlY: any = [
+    ['home'],
+    ['create-appointment', 'field-list', 'appointment-list'],
+    ['visitor-history'],
+    ['create-conferenece', 'conferenece-field-list', 'conferenece-list'],
+    ['warranty-claim'],
+    ['new-add', 'vegetable-list', 'vegetable-release', 'vegetable-release-list', 'vegetable-appointment-lsit', ],
+    ['set-route'], ['bus-release'], ['bus-list'],
+    ['suggestion-list'],
+    ['user', 'admin']
   ];
   ngOnInit() {
   }
   open(key) {
     this.tf = [true, true, true, true, true, true, true, true, true];
     this.tf[key] = false;
+    this.router.navigate(['/' + this.urlX[key]]);
   }
   go(x, y) {
-    // this.router.navigate(['/' + url]);
-    console.log(x, y);
+    this.router.navigate(['/' + this.urlX[x] + '/' + this.urlY[x][y]]);
   }
 }

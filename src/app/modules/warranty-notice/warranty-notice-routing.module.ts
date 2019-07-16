@@ -1,8 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { WarrantyClaimComponent } from './components/warranty-claim/warranty-claim.component';
 
-
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'warranty-claim', component: WarrantyClaimComponent
+  },
+  {
+    path: '', redirectTo:'warranty-claim'
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

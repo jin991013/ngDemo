@@ -29,6 +29,9 @@ const routes: Routes = [
   },
   {
     path: 'user-admin', loadChildren: './modules/user-admin/user-admin.module#UserAdminModule'
+  },
+  {
+    path: '', redirectTo: 'home', pathMatch: 'full'
   }
 ];
 
