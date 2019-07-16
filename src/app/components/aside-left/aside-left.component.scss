@@ -1,0 +1,32 @@
+.aside-left{
+  border:1px solid #000;
+  width: 200px;
+  padding-left: 100px;
+  padding-top:40px;
+  .list{
+    >li{
+      margin:40px 0;
+      >a{
+        font-size: 18px;
+        font-weight: 400;
+        span{
+          font-weight: 800;
+        }
+      }
+      ul{
+        li{
+          margin:10px 0;
+          text-indent: 1em;
+          a{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+.close{
+  height: 0;
+  overflow: hidden;
+  
+}

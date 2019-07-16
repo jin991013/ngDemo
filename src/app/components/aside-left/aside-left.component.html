@@ -1,0 +1,12 @@
+<div class="aside-left">
+  <ul class="list">
+    <li *ngFor="let item of listArr, let key = index">
+      <a href="javascript:;" (click)="open(key)">{{item.title}}
+        <span>></span>
+      </a>
+      <ul *ngIf="item.content" [ngClass]="{'close': tf[key]}" class="close">
+        <li *ngFor="let value of item.content,let i = index"><a href="javascript:;" (click)="go(key, i)">{{value}}</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
