@@ -5,10 +5,11 @@ import { AppointmentAdminRoutingModule } from './appointment-admin-routing.modul
 import { CreateAppointmentComponent } from './components/create-appointment/create-appointment.component';
 import { AppointmentListComponent } from './components/appointment-list/appointment-list.component';
 import { FieldListComponent } from './components/field-list/field-list.component';
+import { AppointmentAdminComponent } from './appointment-admin.component';
 
 
 @NgModule({
-  declarations: [CreateAppointmentComponent, AppointmentListComponent, FieldListComponent],
+  declarations: [CreateAppointmentComponent, AppointmentListComponent, FieldListComponent, AppointmentAdminComponent],
   imports: [
     CommonModule,
     AppointmentAdminRoutingModule

@@ -3,19 +3,24 @@ import { Routes, RouterModule } from '@angular/router';
 import { ConfereneceFieldListComponent } from './components/conferenece-field-list/conferenece-field-list.component';
 import { ConfereneceListComponent } from './components/conferenece-list/conferenece-list.component';
 import { CreateConfereneceComponent } from './components/create-conferenece/create-conferenece.component';
+import { ConfereneceAdminComponent } from './conferenece-admin.component';
 
 const routes: Routes = [
   {
-    path: 'conferenece-field-list', component: ConfereneceFieldListComponent
-  },
-  {
-    path: 'conferenece-list', component: ConfereneceListComponent
-  },
-  {
-    path: 'create-conferenece', component: CreateConfereneceComponent
-  },
-  {
-    path: '', redirectTo: 'create-conferenece'
+    path: '', component: ConfereneceAdminComponent, children: [
+      {
+        path: 'conferenece-field-list', component: ConfereneceFieldListComponent
+      },
+      {
+        path: 'conferenece-list', component: ConfereneceListComponent
+      },
+      {
+        path: 'create-conferenece', component: CreateConfereneceComponent
+      },
+      {
+        path: '', redirectTo: 'create-conferenece'
+      }
+    ]
   }
 ];
 

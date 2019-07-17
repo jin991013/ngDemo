@@ -65,8 +65,8 @@ export class AsideLeftComponent implements OnInit {
     ['visitor-history'],
     ['create-conferenece', 'conferenece-field-list', 'conferenece-list'],
     ['warranty-claim'],
-    ['new-add', 'vegetable-list', 'vegetable-release', 'vegetable-release-list', 'vegetable-appointment-lsit', ],
-    ['set-route'], ['bus-release'], ['bus-list'],
+    ['new-add', 'vegetable-list', 'vegetable-release', 'vegetable-release-list', 'vegetable-appointment-list'],
+    ['set-route', 'bus-release', 'bus-list'],
     ['suggestion-list'],
     ['user', 'admin']
   ];

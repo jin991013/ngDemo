@@ -5,26 +5,31 @@ import { VegetableAppointmentListComponent } from './components/vegetable-appoin
 import { VegetableListComponent } from './components/vegetable-list/vegetable-list.component';
 import { VegetableReleaseComponent } from './components/vegetable-release/vegetable-release.component';
 import { VegetableReleaseListComponent } from './components/vegetable-release-list/vegetable-release-list.component';
+import { VegetableAdminComponent } from './vegetable-admin.component';
 
 
 const routes: Routes = [
   {
-    path: 'new-add', component: NewAddComponent
-  },
-  {
-    path: 'vegetable-appointment-list', component: VegetableAppointmentListComponent
-  },
-  {
-    path: 'vegetable-list', component: VegetableListComponent
-  },
-  {
-    path: 'vegetable-release', component: VegetableReleaseComponent
-  },
-  {
-    path: 'vegetable-release-list', component: VegetableReleaseListComponent
-  },
-  {
-    path: '', redirectTo: 'new-add'
+    path: '', component: VegetableAdminComponent, children: [
+      {
+        path: 'new-add', component: NewAddComponent
+      },
+      {
+        path: 'vegetable-appointment-list', component: VegetableAppointmentListComponent
+      },
+      {
+        path: 'vegetable-list', component: VegetableListComponent
+      },
+      {
+        path: 'vegetable-release', component: VegetableReleaseComponent
+      },
+      {
+        path: 'vegetable-release-list', component: VegetableReleaseListComponent
+      },
+      {
+        path: '', redirectTo: 'new-add'
+      }
+    ]
   }
 ];
 

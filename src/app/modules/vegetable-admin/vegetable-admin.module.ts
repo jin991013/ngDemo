@@ -7,10 +7,17 @@ import { VegetableListComponent } from './components/vegetable-list/vegetable-li
 import { VegetableReleaseComponent } from './components/vegetable-release/vegetable-release.component';
 import { VegetableReleaseListComponent } from './components/vegetable-release-list/vegetable-release-list.component';
 import { VegetableAppointmentListComponent } from './components/vegetable-appointment-list/vegetable-appointment-list.component';
-
+import { VegetableAdminComponent } from './vegetable-admin.component';
 
 @NgModule({
-  declarations: [NewAddComponent, VegetableListComponent, VegetableReleaseComponent, VegetableReleaseListComponent, VegetableAppointmentListComponent],
+  declarations: [
+    NewAddComponent,
+    VegetableListComponent,
+    VegetableReleaseComponent,
+    VegetableReleaseListComponent,
+    VegetableAppointmentListComponent,
+    VegetableAdminComponent
+  ],
   imports: [
     CommonModule,
     VegetableAdminRoutingModule
